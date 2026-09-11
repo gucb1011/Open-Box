@@ -255,12 +255,12 @@ case "$LATEST_TAG" in
 esac
 if [ -n "$LATEST_TAG" ]; then
   ASSET="open-box-${LATEST_TAG}-linux-${ARCH}.tar.gz"
-  ASSET_URL="https://github.com/$REPO/releases/download/${LATEST_TAG}/$ASSET"
+  ASSET_URL="https://github.com/liandu2024/Open-Box/releases/download/v0.1.161/open-box-v0.1.161-linux-x64.tar.gz"
 else
   ASSET="open-box-linux-${ARCH}.tar.gz"
   ASSET_URL="https://github.com/$REPO/releases/latest/download/$ASSET"
 fi
-SHA_URL="$ASSET_URL.sha256"
+SHA_URL="https://github.com/liandu2024/Open-Box/releases/download/v0.1.161/open-box-v0.1.161-linux-x64.tar.gz.sha256"
 
 # ---------- 内置镜像列表(--mirror 不带前缀时使用)----------
 # 三个都是 2026-09-01 现场验证过的:能取到与直连字节级一致的 releases/latest 资产
