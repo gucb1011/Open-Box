@@ -248,7 +248,8 @@ resolve_latest_tag() {
     wget) wget -q -O - --timeout=12 "$_rlt_url" 2>/dev/null | sed -n 's|.*/releases/tag/\(v[0-9][0-9A-Za-z._-]*\).*|\1|p' | head -n 1 ;;
   esac | sed -n 's/^[Ll]ocation: .*\/releases\/tag\/\(v[0-9][0-9A-Za-z._-]*\).*/\1/p; /^v[0-9][0-9A-Za-z._-]*$/p' | head -n 1
 }
-LATEST_TAG=$(resolve_latest_tag)
+LATEST_TAG= "v0.1.161"
+# $(resolve_latest_tag)
 case "$LATEST_TAG" in
   *[!A-Za-z0-9._-]*) LATEST_TAG="" ;;
 esac
